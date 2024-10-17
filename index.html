@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Constancias</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Constancias</h1>
+        <div id="loginContainer">
+            <input type="password" id="password" placeholder="Ingrese contraseña">
+            <button id="entrarBtn">Entrar</button>
+            <div id="passwordError" class="hidden">Contraseña incorrecta</div>
+        </div>
+        
+        <div id="formContainer" class="hidden">
+            <label for="personaId">Seleccionar persona por ID o Cédula:</label>
+            <input type="text" id="personaId" placeholder="Ingrese ID o Cédula">
+            <button id="buscarBtn">Buscar</button>
+            <button id="regresarBtn" class="hidden">Regresar</button>
+            <div id="resultado" class="hidden"></div>
+            <div id="descargaContainer" class="hidden">
+                <h2>Descargar Constancia</h2>
+                <label for="formacionSelect">Seleccionar Formación:</label>
+                <select id="formacionSelect">
+                    <option value="">Seleccione una formación</option>
+                    <option value="Corte de Pelo">Corte de Pelo</option>
+                    <option value="Manicure">Manicure</option>
+                    <option value="Maquillaje">Maquillaje</option>
+                    <!-- Agrega más opciones aquí -->
+                </select>
+                <button id="descargarBtn" class="hidden">Descargar CS (PDF)</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="constanciaContainer" class="hidden">
+        <div class="constancia">
+            <h2>CONSTANCIA:</h2>
+            <p>La Coordinadora del Centro de Formación Socialista Carora, INCES Region-Lara hace constar...</p>
+            <button id="regresarConstanciaBtn" class="small-button">Regresar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
